@@ -11,7 +11,7 @@ export default function () {
         <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/gallery' exact component={Gallery} />
-            <Route path='/photo' exact component={Photo} />
+            <Route path='/photo/:photoId' exact component={Photo} />
             <Route path='/favorite' exact component={Favorite} />
         </Switch>
     )

@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 
 import List from './views/List'
-import {GET_PHOTOS} from './service';
+import {GET_PHOTOS} from '../../../utils/PhotoApiService';
 import './style.scss';
 
 function Gallery(props) {
@@ -17,7 +17,7 @@ function Gallery(props) {
       .then()
 
 
-  }, []);
+  }, [setPhotos]);
 
   return (
     <div className="gallery">
