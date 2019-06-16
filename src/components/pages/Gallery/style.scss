@@ -40,5 +40,19 @@
       font-size: 18px;
       text-align: center;
     }
+    b {
+      position: absolute;
+      display: block;
+      left: 5px;
+      top: 5px;
+      background: rgb(255, 255, 98);
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      line-height: 35px;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
   }
 }

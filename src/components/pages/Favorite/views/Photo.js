@@ -11,13 +11,13 @@ function Photo(props) {
       return date.toLocaleDateString('ru-RU')
     }
 
-    const addFavorite = () => {
-      props.setFavorite(props.data)
+    const remove = () => {
+      props.removeFavorite(id)
     }
 
   return (
     <div className="photo">
-        <b onClick={addFavorite}> + </b>
+        <b onClick={remove}> - </b>
         <span>{likes}</span>
         <i>{renderDate()}</i> 
         < NavLink to={`photo/${id}`} >
