@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import List from './views/List'
 import {GET_PHOTOS} from '../../../utils/PhotoApiService';
+import { setPhotosAction, setFavoriteAction } from './redux/actions';
 import './style.scss';
 
 function Gallery(props) {
@@ -30,9 +31,9 @@ const mapStateToProps = state => ({
   photos: state.gallery.photos
 });
 
-const mapDispatchToProps = dispatch => ({
-  setPhotos: photos => dispatch({type: 'SET_PHOTOS', photos}),
-  setFavorite: photo => dispatch({type: 'SET_FAVORITE', photo})
-});
+const mapDispatchToProps = {
+  setPhotos: setPhotosAction,
+  setFavorite: setFavoriteAction,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
